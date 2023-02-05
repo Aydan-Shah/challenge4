@@ -1,0 +1,308 @@
+$darkblue: black;
+$white: white;
+
+body {
+    background-color: $darkblue;
+    .logo-menu {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        .menu {
+            nav {
+                ul {
+                    display: flex;
+                    gap: 20px;
+                    li {
+                        list-style: none;
+                        a {
+                            color: $white;
+                            opacity: 0.7;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pro-img {
+        width: 100%;
+    }
+    .common-img {
+        width: 50%;
+        margin: auto;
+        z-index: 1;
+        position: relative;
+        height: 500px;
+        img {
+            width: 100%;
+        }
+        p {
+            text-align: center;
+            font-size: 25px;
+            color: white;
+        }
+        .pale {
+            opacity: 0.4;
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            /* width: 50%; */
+            /* display: inline-block; */
+            text-align: center;
+            margin: auto;
+            padding: 10px 90px;
+            color: white;
+            background-color: #3066af;
+            border-radius: 20px;
+        }
+    }
+    .products {
+        position: relative;
+        background-color: #181f2b;
+        height: auto;
+        .pro-img {
+            width: 100%;
+            position: absolute;
+            top: -125%;
+            // height: 600px;
+        }
+        .products-detail {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+            .pro {
+                width: 37%;
+                color: $white;
+                text-align: center;
+            }
+        }
+      
+    }
+    .proactive {
+        background-color: #181f2b;
+        .stay-pro {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 100px;
+            color: $white;
+            .stay-img {
+                width: 45%;
+                img {
+                    width: 100%;
+                }
+            }
+            .stay-text {
+                width: 50%;
+                a {
+                  color: #62e0d9;
+                }
+                
+            }
+        }
+    }
+    .cards-info {
+        background-color: #181f2b;
+        height: 800px;
+        .about-cards {
+            padding-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            .card {
+                width: 26rem;
+                border: none;
+                box-shadow: 8px -8px 10px 0px;
+                background-color: #1d232aa3;
+                .card-body {
+                    color: white;
+                }
+                .card-imgs {
+                    display: flex;
+                    img {
+                        border-radius: 100%;
+                        width: 80px;
+                        height: 80px;
+                    }
+                    .img-info {
+                        margin-left: 10px;
+                        font-weight: 800;
+                    }
+                }
+            }
+         }
+    }
+    footer {
+        background-color: #030a17;
+        
+        .get-early {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            .card {
+                position: absolute;
+                top: -195px;
+                border: none;
+                box-shadow: 8px -8px 10px 0px;
+                background-color: #1c212b;
+                .card-body {
+                    text-align: center;
+                    padding: 60px 0;
+                    h2 {
+                        color: white;
+                    }
+                    p {
+                        color: white;
+                        width: 60%;
+                        margin: auto;
+                        padding-bottom: 30px;
+                    }
+                    form {
+                        input {
+                            border: none;
+                            outline: none;
+                            padding: 10px;
+                            border-radius: 20px;
+                        }
+                        input[type="email"] {
+                            width: 50%;
+                        }
+                        input[type="submit"] {
+                            width: 20%;
+                            background-color: #3c64fa;
+                            color: white;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-detail {
+            padding-top: 200px;
+            .footer-menu {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+                color: white;
+                li {
+                    list-style: none;
+                    margin-bottom: 15px;
+                    a {
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+                .sc-link a {
+                    color: #fff;
+                    font-size: 25px;
+                    text-decoration: none;
+                    margin-right: 10px;
+                }
+            }
+        }
+       
+    }
+}
+
+
+$tablet: 992px;
+$tab: 768px;
+$phone: 530px;
+
+body {
+    @media screen and (max-width: $tablet) {
+        .common-img {
+            height: 440px;
+        }
+        .cards-info {
+            height: 1100px;
+            .about-cards {
+                display: block;
+                .card {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $tab) {
+        header {
+            .logo-menu {
+                img {
+                    width: 120px;
+                }
+            }
+            .menu {
+                line-height: 30px;
+                nav {
+                    ul {
+                        display: flex;
+                        gap: 10px !important;
+                        padding-left: 10px;
+                        a {
+                            font-size: 13px;
+                        }
+                    }
+                }
+                
+            }
+        }
+        .common-img {
+            height: 530px;
+        }
+        .products {
+            padding-bottom: 29px;
+            .products-detail {
+                display: block !important;
+                .pro {
+                    width: 100%;
+                }
+            }
+        }
+        .proactive {
+            .stay-pro {
+                display: block;
+                .stay-img {
+                    width: 100%;
+                }
+                .stay-text {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        footer {
+            .footer-detail {
+                .footer-logo {
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                .footer-menu {
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $phone) {
+        footer{
+            .get-early {
+                .card {
+                    .card-body {
+                        p {
+                            width: 100%;
+                        }
+                        form {
+                            input[type="email"] {
+                                width: 100%;
+                            }
+                            input[type="submit"] {
+                                width: 50%;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
