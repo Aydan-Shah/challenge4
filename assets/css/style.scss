@@ -207,7 +207,7 @@ body {
 $tablet: 992px;
 $tab: 768px;
 $phone: 530px;
-
+$smallphone: 520px;
 body {
     @media screen and (max-width: $tablet) {
         .common-img {
@@ -248,6 +248,8 @@ body {
         }
         .common-img {
             height: 530px;
+            margin: 0;
+            width: 100%;
         }
         .products {
             padding-bottom: 29px;
@@ -284,6 +286,12 @@ body {
         }
     }
     @media screen and (max-width: $phone) {
+        .common-img {
+            height: 620px;
+            button {
+                font-size: 11px;
+            }
+        }
         footer{
             .get-early {
                 .card {
@@ -300,6 +308,20 @@ body {
                                 margin-top: 20px;
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: $smallphone) {
+        .cards-info {
+            height: 1300px;
+        }
+        .get-early {
+            .card {
+                .card-body {
+                    p {
+                        font-size: 12px;
                     }
                 }
             }
